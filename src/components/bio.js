@@ -37,6 +37,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
+        alignItems: `center`,
         marginBottom: rhythm(2.5),
       }}
     >
@@ -53,13 +54,11 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
+      <p
+        style={{
+          textAlignVertical: `center`,
+        }}>
+        안녕하세요! IT 기술에 관심이 많고, 다양한 공부를 즐기고 있습니다.
       </p>
     </div>
   )

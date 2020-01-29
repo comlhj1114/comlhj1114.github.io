@@ -53,13 +53,8 @@ const Bio = () => {
         imgStyle={{
           borderRadius: `50%`,
         }}
-      />
-      <p
-        style={{
-          textAlignVertical: `center`,
-        }}>
+      />      
         안녕하세요! IT 기술에 관심이 많고, 다양한 공부를 즐기고 있습니다.
-      </p>
     </div>
   )
 }

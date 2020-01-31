@@ -4,10 +4,6 @@ module.exports = {
     author: `Hoonjae Lee`,
     description: `꾸준히 성장 해 나가자`,
     siteUrl: `https://comlhj114.github.io/`,
-    social: {
-      // 수정해야함
-      twitter: `kylemathews`,
-    },
   },
   plugins: [
     {

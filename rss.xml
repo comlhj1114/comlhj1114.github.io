@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hoon's Blog]]></title><description><![CDATA[꾸준히 성장 해 나가자]]></description><link>https://comlhj114.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Mar 2020 12:08:20 GMT</lastBuildDate><item><title><![CDATA[글또 시작!]]></title><description><![CDATA[벌써 202…]]></description><link>https://comlhj114.github.io/잡담/글또_시작/</link><guid isPermaLink="false">https://comlhj114.github.io/잡담/글또_시작/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;벌써 2020년이 두 달이 지났습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hoon's Blog]]></title><description><![CDATA[꾸준히 성장 해 나가자]]></description><link>https://comlhj114.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Mar 2020 12:45:53 GMT</lastBuildDate><item><title><![CDATA[글또 시작!]]></title><description><![CDATA[벌써 202…]]></description><link>https://comlhj114.github.io/잡담/글또_시작/</link><guid isPermaLink="false">https://comlhj114.github.io/잡담/글또_시작/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;벌써 2020년이 두 달이 지났습니다.&lt;/p&gt;
 &lt;p&gt;부끄럽게도, 새해가 시작되면서 마음속으로 다짐했던 일들 중 아직 시작조차 하지 않은 것들이 대부분이고, 심지어는 뚜렷하게 기억이 나지 않은 채 느낌만이 머릿속을 맴돌기만 하는 계획도 많습니다.&lt;/p&gt;
 &lt;p&gt;하지만 다행이도 제가 작년에 회사 동료분께 말하고 다녔던 ‘블로그 시작’ 이라는 계획은 회사 동료분께서 상기시켜주셨습니다. “훈재님, 글또라는 모임이 있던데 한 번 해보시지 않겠어요?” 그렇게 글또라는 모임을 시작하게 되었고 이렇게 다짐글을 쓰게 되었습니다.&lt;/p&gt;
 &lt;p&gt;늘 새로운 것을 배우며 열심히 살고 있다고 생각을 했지만, 막상 돌이켜보면 내가 무엇을 배웠고, 어떤 것을 하며 지내왔는지 기억이 나지 않을 때가 많아서 아쉬웠습니다. 그래서 페이스북에서 공유되는 글들과 구글에서 기술문서를 검색할 때 나오는 블로그들을 보면서, 저렇게 글을 써서 공유를 하면 내가 아는 것을 확실히 정리를 할 수 있고, 내가 무엇을 했는지 돌이켜보기도 좋겠다는 생각을 했습니다.&lt;/p&gt;
@@ -8,7 +8,7 @@
 [ .] Gatsby로 Github Page 만들기
 [ .] Python으로 웹 스크래핑 하기
 [ .] Scrapy로 웹 스크래핑 하기
-[ .] AWS Labmda 사용기
+[ .] AWS Lambda 사용기
 [ .] AWS DynamoDB 사용기
 [ .] 자료구조 &amp;amp; 알고리즘 공부내용&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
  &lt;!--[ .]파이썬으로 하는 MRI 리컨스트럭션--&gt;

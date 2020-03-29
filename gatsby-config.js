@@ -3,7 +3,7 @@ module.exports = {
     title: `Hoon's Blog`,
     author: `Hoonjae Lee`,
     description: `꾸준히 성장 해 나가자`,
-    siteUrl: `https://comlhj114.github.io/`,
+    siteUrl: `https://comlhj1114.github.io/`,
   },
   plugins: [
     {
@@ -40,6 +40,7 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           `gatsby-plugin-draft`,
+          `gatsby-plugin-sitemap`,
         ],
       },
     },
@@ -77,6 +78,20 @@ module.exports = {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: "UA-157426875-1",
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://comlhj1114.github.io',
+        sitemap: 'https://comlhj1114.github.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `hoons-blog`
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

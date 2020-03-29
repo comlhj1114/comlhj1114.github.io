@@ -6,11 +6,19 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
+import { Disqus } from 'gatsby-plugin-disqus'
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+
+    let disqusConfig = {
+      url: this.props.location.href,
+      identifier: post.id,
+      title: post.frontmatter.title,
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -75,6 +83,7 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </nav>
+        <Disqus config={disqusConfig} />
       </Layout>
     )
   }

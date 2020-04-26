@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hoon's Blog]]></title><description><![CDATA[꾸준히 성장 해 나가자]]></description><link>https://comlhj1114.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 26 Apr 2020 14:51:43 GMT</lastBuildDate><item><title><![CDATA[5분만에 알아보는 AWS Lambda]]></title><description><![CDATA[클라우드 서비스 덕에 서버가 없어도, 서버 관리자가 없어도 소수의 인원이 웹서비스를 만들고 운용할 수 있는 시대가 도래하였습니다. 그것이 가능한 이유중 하나인 Serverless를 AWS Lambda…]]></description><link>https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</link><guid isPermaLink="false">https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;클라우드 서비스 덕에 서버가 없어도, 서버 관리자가 없어도 소수의 인원이 웹서비스를 만들고 운용할 수 있는 시대가 도래하였습니다. 그것이 가능한 이유중 하나인 Serverless를 AWS Lambda 예제를 이용하여 알아보겠습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hoon's Blog]]></title><description><![CDATA[꾸준히 성장 해 나가자]]></description><link>https://comlhj1114.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 26 Apr 2020 14:59:35 GMT</lastBuildDate><item><title><![CDATA[5분 만에 알아보는 AWS Lambda]]></title><description><![CDATA[클라우드 서비스 덕에 서버가 없어도, 서버 관리자가 없어도 소수의 인원이 웹서비스를 만들고 운용할 수 있는 시대가 도래하였습니다. 그것이 가능한 이유 중 하나인 Serverless를 AWS Lambda…]]></description><link>https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</link><guid isPermaLink="false">https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;클라우드 서비스 덕에 서버가 없어도, 서버 관리자가 없어도 소수의 인원이 웹서비스를 만들고 운용할 수 있는 시대가 도래하였습니다. 그것이 가능한 이유 중 하나인 Serverless를 AWS Lambda 예제를 이용하여 알아보겠습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;서버리스란&lt;/h2&gt;
-&lt;p&gt;서버리스는 운용하는 입장에서 서버에 대한 관리가 필요하지 않은 서비스입니다. 서버는 클라우드 서비스에서 관리를 해 주고, 사용자는 실행에 필요한 함수에 대해서만 관리를 하면 됩니다. 사용하지 않더라도 서버를 켜 놓은 시간에 대해서 비용이 발생하는 가상서버와는 달리, 서버리스는 함수를 실행시키는데에 필요한 리소스에 대한 비용만을 지불하면 됩니다. 대표적인 서버리스 서비스는 AWS Lambda, GCP Functions, Azure functions가 있습니다.&lt;/p&gt;
-&lt;p&gt;서버리스를 이용하면 API를 손쉽게 만들 수 있을 뿐만 아니라, 다른 클라우드 서비스와 트리거를 설정 해 놓으면, 실시간 파일처리등의 서비스를 구현 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;서버리스는 운용하는 입장에서 서버에 대한 관리가 필요하지 않은 서비스입니다. 서버는 클라우드 서비스에서 관리해 주고, 사용자는 실행에 필요한 함수에 대해서만 관리를 하면 됩니다. 사용하지 않더라도 서버를 켜 놓은 시간에 대해서 비용이 발생하는 가상서버와는 달리, 서버리스는 함수를 실행시키는 데에 필요한 리소스에 대한 비용만을 지불하면 됩니다. 대표적인 서버리스 서비스는 AWS Lambda, GCP Functions, Azure functions가 있습니다.&lt;/p&gt;
+&lt;p&gt;서버리스를 이용하면 API를 손쉽게 만들 수 있을 뿐만 아니라, 다른 클라우드 서비스와 트리거를 설정해 놓으면, 실시간 파일 처리 등의 서비스를 구현 할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;이번 포스트에서는 AWS Lambda와 파이썬을 이용하여 간단한 API를 만들어보겠습니다.&lt;/p&gt;
 &lt;h2&gt;서버리스 프레임워크&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://serverless.com/&quot;&gt;서버리스 프레임워크&lt;/a&gt;는 서버리스 서비스를 더욱 간편하게 이용 할 수 있게 해주는 오픈소스 프레임워크입니다. 서버리스 프레임워크를 이용하면, 서버리스에 사용될 함수의 개발, 테스트, 배포 단계를 편리하게 하실 수 있습니다.&lt;/p&gt;
 &lt;h3&gt;Node.js 설치&lt;/h3&gt;
-&lt;p&gt;서버리스 프레임워크는 &lt;a href=&quot;https://nodejs.org/ko/&quot;&gt;Node.js&lt;/a&gt;가 설치 되어있어야 하는데, 맥에서 &lt;a href=&quot;https://github.com/nvm-sh/nvm&quot;&gt;nvm&lt;/a&gt;을 통해 Node.js를 설치하기 위해서는 아래 명령어를 이용하면 됩니다.&lt;/p&gt;
+&lt;p&gt;서버리스 프레임워크는 &lt;a href=&quot;https://nodejs.org/ko/&quot;&gt;Node.js&lt;/a&gt;가 설치되어있어야 하는데, 맥에서 &lt;a href=&quot;https://github.com/nvm-sh/nvm&quot;&gt;nvm&lt;/a&gt;을 통해 Node.js를 설치하기 위해서는 아래 명령어를 이용하면 됩니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# nvm 설치&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;# Node.js LTS 버전 설치&lt;/span&gt;
 nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --lts&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;서버리스 프레임워크 설치&lt;/h3&gt;
-&lt;p&gt;서버리스 프레임워크는 아래의 명령어로 간편하게 설치 하실 수 있습니다.&lt;/p&gt;
+&lt;p&gt;서버리스 프레임워크는 아래의 명령어로 간편하게 설치하실 수 있습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g serverless&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;AWS 계정설정&lt;/h3&gt;
-&lt;p&gt;서버리스 프레임워크에서 AWS 계정에 접근 하기 위해서는 환경변수에 AWS credentials를 등록해야 합니다. 아래 명령어로 환경변수에 AWS credentials를 일회성으로 등록 할 수 있고, 쉘 실행시에 자동으로 등록해주기 위해서는 아래 명령어를 ~/.bashrc 나 ~/.zshrc 파일에 넣어주면 됩니다.&lt;/p&gt;
+&lt;p&gt;서버리스 프레임워크에서 AWS 계정에 접근하기 위해서는 환경변수에 AWS credentials를 등록해야 합니다. 아래 명령어로 환경변수에 AWS credentials를 일회성으로 등록 할 수 있고, 쉘 실행 시에 자동으로 등록해주기 위해서는 아래 명령어를 ~/.bashrc 나 ~/.zshrc 파일에 넣어주면 됩니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;AWS_ACCESS_KEY_ID&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;AKIAIOSFODNN7EXAMPLE
 &lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;AWS_SECRET_ACCESS_KEY&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 &lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;AWS_DEFAULT_REGION&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;us-west-2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -57,7 +57,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --lts&lt;/
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;서버리스 프레임워크는 여러가지 클라우드 서비스와 여러가지 언어의 조합으로 템플릿을 제공하는데, 우리는 AWS Lambda를 python3로 이용하는 aws-python3 템플릿을 사용하여 프로젝트를 만들겠습니다.&lt;/p&gt;
+&lt;p&gt;서버리스 프레임워크는 여러 가지 클라우드 서비스와 여러 가지 언어의 조합으로 템플릿을 제공하는데, 우리는 AWS Lambda를 python3로 이용하는 aws-python3 템플릿을 사용하여 프로젝트를 만들겠습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;serverless create -t aws-python3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -131,7 +131,7 @@ handler.py는 우리가 클라우드 서비스에서 실행시킬 함수가 들�
 &lt;h3&gt;API 배포&lt;/h3&gt;
 &lt;p&gt;서버리스 프레임워크의 아래 명령어로 API를 배포 할 수 있습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;serverless deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;배포 완료 후, endpoint에 API주소가 나타납니다. 그 주소 제일 뒤에 ?age=100을 추가하여 API를 테스트 해 보겠습니다. 아래와 같은 출력이 나온다면 성공입니다. 웹브라우저나 curl을 이용하여 테스트를 해 보시면 됩니다.
+&lt;p&gt;배포 완료 후, endpoint에 API 주소가 나타납니다. 그 주소 제일 뒤에 ?age=100을 추가하여 API를 테스트해 보겠습니다. 아래와 같은 출력이 나온다면 성공입니다. 웹브라우저나 curl을 이용하여 테스트해 보시면 됩니다.
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 522px;&quot;
@@ -163,12 +163,12 @@ handler.py는 우리가 클라우드 서비스에서 실행시킬 함수가 들�
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;축하드립니다! 서버리스를 이용하여 API를 완성하셨습니다!&lt;/p&gt;
 &lt;h2&gt;마지막으로&lt;/h2&gt;
-&lt;p&gt;서버에 대한 고민없이, 서버리스 프레임워크의 설정값과 함수만을 이용하여 API를 만들어보았습니다. 서버리스 프레임워크를 활용하면, CPU를 이용하는 간단한 딥러닝 모델도 API 형태로 서빙을 할 수 있습니다. 다음번에는 서버리스를 이용하여 딥러닝 모델을 배포하는 방법에 대해 살펴보겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby로 블로그 만들기]]></title><description><![CDATA[블로그를 시작하기로 마음을 먹은 뒤에 가장 먼저 한 일은 어떤 플랫폼을 쓸 것인가였다. IT라면 역시 깃허브지! 라는 마음으로 깃허브 페이지를 만들어보았는데, ruby를 전혀 모르는 입장에서 Jekyll…]]></description><link>https://comlhj1114.github.io/개발/Gatsby로_블로그_만들기/</link><guid isPermaLink="false">https://comlhj1114.github.io/개발/Gatsby로_블로그_만들기/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;서버에 대한 고민 없이, 서버리스 프레임워크의 설정값과 함수만을 이용하여 API를 만들어보았습니다. 서버리스 프레임워크를 활용하면, CPU를 이용하는 간단한 딥러닝 모델도 API 형태로 서빙을 할 수 있습니다. 다음번에는 서버리스를 이용하여 딥러닝 모델을 배포하는 방법에 대해 살펴보겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby로 블로그 만들기]]></title><description><![CDATA[블로그를 시작하기로 마음을 먹은 뒤에 가장 먼저 한 일은 어떤 플랫폼을 쓸 것인가였다. IT라면 역시 깃허브지! 라는 마음으로 깃허브 페이지를 만들어보았는데, ruby를 전혀 모르는 입장에서 Jekyll…]]></description><link>https://comlhj1114.github.io/개발/Gatsby로_블로그_만들기/</link><guid isPermaLink="false">https://comlhj1114.github.io/개발/Gatsby로_블로그_만들기/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;블로그를 시작하기로 마음을 먹은 뒤에 가장 먼저 한 일은 어떤 플랫폼을 쓸 것인가였다. IT라면 역시 깃허브지! 라는 마음으로 깃허브 페이지를 만들어보았는데, ruby를 전혀 모르는 입장에서 Jekyll은 쉬운듯 어려웠다. 최근에 자바스크립트와 리액트를 입문정도 수준으로 공부했는데, 마침 리액트를 기반으로한 Gatsby라는 프레임워크를 알게되어서 깃허브 페이지를 만들어 보았다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;왜 Jekyll이나 Gatsby를 사용할까?&lt;/h2&gt;
 &lt;p&gt;Github page에서는 공식적으로 Jekyll을 권장하고 있는데, Jekyll이나 Gatsby를 사용하면, github page에 쉽게 블로그를 만들 수 있다. 더 중요한 것은 마크다운으로 글을 작성하면 웹페이지 형태로 변환을 해 줘서, HTML이 아닌 익숙한 형식으로 쉽게 글을 작성 할 수 있다. 물론 네이버나 티스토리, 미디엄등의 블로그 서비스를 이용하는 것 보다는 조금 더 복잡하지만, 한 번 익숙해지면 글을 작성하는 난이도는 블로그 서비스를 이용하는 것과 크게 다름이 없다. 그리고 멋진 github.io 도메인은 덤이다.&lt;/p&gt;
-&lt;h2&gt;Gatsby는 무엇인가&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[5분만에 알아보는 파이썬 웹 스크래핑]]></title><description><![CDATA[…]]></description><link>https://comlhj1114.github.io/개발/5분만에_알아보는_웹스크래핑/</link><guid isPermaLink="false">https://comlhj1114.github.io/개발/5분만에_알아보는_웹스크래핑/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;h2&gt;Gatsby는 무엇인가&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[5분 만에 알아보는 파이썬 웹 스크래핑]]></title><description><![CDATA[…]]></description><link>https://comlhj1114.github.io/개발/5분만에_알아보는_웹스크래핑/</link><guid isPermaLink="false">https://comlhj1114.github.io/개발/5분만에_알아보는_웹스크래핑/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;구슬이 서 말이어도 꿰어야 보배다.&lt;br&gt;
 요즘엔 데이터가 재산이라는 말이 있습니다. 그럼 세상에서 가장 많은 데이터는 누가 가지고 있을까요? 세상에서 가장 많은 데이터는 웹상에 공개된 형태로 존재하고 있습니다. 하지만 이 데이터를 가지고 있는다고 해서 바로 부자가 되지는 않습니다. 구글이 데이터를 잘 정리해서 검색하기 쉽게 만들어 준 것처럼 데이터를 잘 꿰어야지만 비로소 보배가 되는 것이지요.&lt;br&gt;
 웹 상의 데이터를 꿰는 과정인 웹 스크래핑의 세계에 처음으로 발을 들이고 싶으신 분들을 위해 간략한 가이드를 작성해 보았습니다.&lt;/p&gt;

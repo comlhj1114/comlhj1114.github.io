@@ -1,4 +1,326 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hoon's Blog]]></title><description><![CDATA[꾸준히 성장 해 나가자]]></description><link>https://comlhj1114.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 26 Apr 2020 14:59:35 GMT</lastBuildDate><item><title><![CDATA[5분 만에 알아보는 AWS Lambda]]></title><description><![CDATA[클라우드 서비스 덕에 서버가 없어도, 서버 관리자가 없어도 소수의 인원이 웹서비스를 만들고 운용할 수 있는 시대가 도래하였습니다. 그것이 가능한 이유 중 하나인 Serverless를 AWS Lambda…]]></description><link>https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</link><guid isPermaLink="false">https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hoon's Blog]]></title><description><![CDATA[꾸준히 성장 해 나가자]]></description><link>https://comlhj1114.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 19 Jul 2020 13:09:10 GMT</lastBuildDate><item><title><![CDATA[맥북 생명연장 프로젝트 (1) - 청소]]></title><description><![CDATA[나는 맥북 프로 레티나 13인치 2015 Early…]]></description><link>https://comlhj1114.github.io/잡담/맥북_청소/</link><guid isPermaLink="false">https://comlhj1114.github.io/잡담/맥북_청소/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;나는 맥북 프로 레티나 13인치 2015 Early 버전을 사용중이다. 요즘 왠지 노트북이 버벅거리고, 왠지 더 뜨거운 것 같다. 노트북을 바꿔야하나?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;시작&lt;/h2&gt;
+&lt;p&gt;최근에 갑자기 맥북이 버벅거리고, 느려져서 맥북을 바꿔야하나하고 고민을 하던 차에, 업그레이드라는 옵션을 생각 해보았습니다. 노트북 업그레이드라면 흔히 CPU, RAM, Storage (SSD) 옵션을 생각할 수 있습니다. 하지만 최근 맥북은 공간 최적화, 성능, 보안등의 이슈로 CPU는 물론, RAM과 SSD 모두 메인보드에 납땜을 하는 형태로 나와서 업그레이드가 불가능합니다. 다행히도 제 노트북 (Macbook Pro Retina 13-inch 2015 Early) 모델은 SSD 업그레이드가 가능하다고 합니다.&lt;/p&gt;
+&lt;p&gt;맥용 업그레이드 키트를 판매하는 OWC 사이트를 참고해 보면, 메모리 업그레이드는 Non-Retina 버전의 맥북프로에서 가능하고, SSD 업그레이드는 Non-Retina 버전의 맥북프로와 2015년 이전의 맥북프로 레티나 모델이 가능한 것으로 보입니다. (참고: OWC &lt;a href=&quot;https://eshop.macsales.com/shop/ssd/owc/macbook-pro&quot;&gt;SSD&lt;/a&gt;, &lt;a href=&quot;https://eshop.macsales.com/shop/memory/Apple_MacBook_MacBook_Pro/Upgrade&quot;&gt;Memory&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;맥북 생명연장 프로젝트의 순서는 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. 발열잡기
+2. SSD 업그레이드&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이번 편에서는 맥북의 성능 하락의 원인 중 하나로 의심되는 발열잡기를 해 보겠습니다. 발열에 의해 CPU 스로틀링이 발생 한 것은 아닌가 의심이 되어서, 맥북 청소를 하고 써멀컴파운드 재도포를 할 것입니다. 스로틀링과 써멀컴파운드에 대한 간단한 설명을 드린 뒤에, 작업 사진과 결과를 보여드리겠습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;스로틀링 (Throttling)&lt;/h2&gt;
+&lt;p&gt;컴퓨터에서 스로틀링이란 용어는 주로 과열에 의한 부품 파손을 막기위해 성능을 하락시키는 것을 뜻합니다. 제 경우에는 맥북이 버벅이는 순간에 노트북을 만져보면 뜨거움이 느껴지는 경우가 많아서 성능하락의 원인을 스로틀링으로 추측을 했습니다.&lt;/p&gt;
+&lt;p&gt;과열에 의한 스로트링을 막기 위해서는 컴퓨터의 냉각 시스템을 점검하거나 업그레이드 하면 됩니다.&lt;/p&gt;
+&lt;p&gt;컴퓨터의 냉각 시스템은 크게 방열판과 팬으로 이루어져 있는데, 방열판과 CPU 사이에 공기층을 없앨때 사용하는 써멀컴파운드 (혹은 써멀그리스)를 교체 해 주거나, 쌓인 먼지로인해 팬에 의한 공기순환이 방해받지 않도록 청소를 하면 됩니다.&lt;/p&gt;
+&lt;p&gt;컴퓨터를 오래 사용하면, 써멀컴파운드가 굳어서 제 역할을 다하지 못하는 경우가 발생할 수 있고, 먼지가 많이 쌓여서 과열을 유발하기도 합니다.&lt;/p&gt;
+&lt;p&gt;따라서 저는 이번에 맥북 청소를 하고, 써멀컴파운드를 다시 도포 해주기로 하였습니다.&lt;/p&gt;
+&lt;h2&gt;써멀컴파운드 (Thermal compound)&lt;/h2&gt;
+&lt;p&gt;써멀 컴파운드는 CPU 등의 발열체와 방열판 사이의 열전도성을 높여주기 위해 사용됩니다. CPU와 방열판은 전도 (conduction) 현상으로 열전달이 이루어지는데요, 전도현상의 효율은 접촉면의 재질과 면적이 매우 중요한 요소입니다. CPU와 방열판이 완벽히 접촉하면 이상적이겠지만, 현실적으로는 CPU와 방열판 사이에 미세한 공기층이 존재하게 됩니다. 문제는 공기의 열전도성이 0.025 W/(m⋅K) 으로 매우 낮다는 점인데요, 공기층으로 인한 열전도율 하락을 막기위해 보통 6~12 W/(m⋅K) 정도의 전도성을 가지는 써멀컴파운드로 공기층을 채워주는 방법이 사용되고 있습니다. (아래 그림에서 빨간색으로 표시된 부분이 미세한 공기층입니다.)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b36e68ccc85b9050c2914762d99a671c/9f82e/thermal_compound.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 23.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABcSAAAXEgFnn9JSAAABUElEQVQY01WQzUsCARTE9/+sQ1mpablJKe6aViusUmkfBgZlBB4CJSXJRfzIVguy1C5agWEH/wAvHrzUr3VPNTA8HsNj5o2gBIOEQyGuUikK+TzxgwNURWEnEEC7veUvPvt9ippGpVTisdHgrdej3WpRLZe5q1RMCmeJBLLXy7bfT2x3l0Q8juTxsCGKXKfTTCYThsMh4/GYm2yWlYV53I5l1sU1jg3zWFhFtNuwLy7itFoRet0u5WLRdMxmMtRrNZMf7++8NJt0jAQlQ3/tdNAKBY4UP9HQFpGgzIbLhSJ52ZElLmIqIb+EIDocpnAUjbKnqqw5nWz6fGzJslnDFKPRiO+fH/K5HHMzsziWrPjcIsfGTUCSsVkseFedrNpsCNMXTw4PuUwmzYTnp6fmvh+JUKtW/3X4NRigG+kf63UejI867TbPT080dB39XjfnL2L/Jlua/7OmAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;CPU와 방열판 사이의 미세한 공기층&quot;
+        title=&quot;CPU와 방열판 사이의 미세한 공기층&quot;
+        src=&quot;/static/b36e68ccc85b9050c2914762d99a671c/fcda8/thermal_compound.png&quot;
+        srcset=&quot;/static/b36e68ccc85b9050c2914762d99a671c/12f09/thermal_compound.png 148w,
+/static/b36e68ccc85b9050c2914762d99a671c/e4a3f/thermal_compound.png 295w,
+/static/b36e68ccc85b9050c2914762d99a671c/fcda8/thermal_compound.png 590w,
+/static/b36e68ccc85b9050c2914762d99a671c/9f82e/thermal_compound.png 820w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위의 열전달 현상을 쉽게 이해하기 위해서 스테이크를 팬에 조리하는 예를 들어 보겠습니다. 기름없이 스테이크를 구울 경우, 스테이크가 완전히 평평해서 팬과 완전히 밀착 된다면 조리가 잘 되겠지만, 스테이크가 울퉁불퉁해서 팬과 닿지 않는 부분이 생긴다면, 그 부분은 팬과 고기 사이의 공기때문에 열전달이 잘 이루어 지지않아 충분히 익지 않을 것입니다. 따라서, 울퉁불퉁한 스테이크를 골고루 익히기 위해서는 기름을 이용해서 공기층을 최대한 제거 해 주는 것이 좋습니다.&lt;/p&gt;
+&lt;p&gt;써멀 컴파운드 역시 CPU와 방열판 사이의 공기층을 제거해서 열이 효율적으로 전달되게 도와주는 역할을 합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;이제 본격적으로 맥북을 분해해서 청소를 한 뒤에, 써멀컴파운드를 재도포 해 보겠습니다.&lt;/p&gt;
+&lt;p&gt;준비물은 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. P5, T5 드라이버
+2. 스펏져 (spudger)
+3. 에어클리너, 블로어, 붓, 등 먼지제거용품
+4. 알콜스왑
+5. 써멀컴파운드&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;맥북 분해 청소&lt;/h2&gt;
+&lt;p&gt;맥북을 분해하기 위해서는 특수한 드라이버와 맥북의 구조에 대한 배경지식, 그리고 용기가 필요합니다.&lt;/p&gt;
+&lt;p&gt;맥북의 구조에 대한 설명과 분해방법은 &lt;a href=&quot;https://www.ifixit.com/&quot;&gt;iFixit&lt;/a&gt; 이라는 사이트에서 매우 자세히 다루고 있고, 유튜브 영상으로도 쉽게 찾아볼 수 있습니다. 반드시 본인 노트북의 구조에 대해 충분히 공부하시고, 발생 할 수 있는 위험에 대해 인지 하신 뒤에 작업 하시기를 추천드립니다.&lt;/p&gt;
+&lt;p&gt;다행히 2015년 13인치 맥북 프로 레티나는 뒷판, 배터리커넥터, 히트싱크 세 개만 분해하면 손쉽게 청소와 써멀컴파운드 재도포를 할 수 있습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;맥북 뒷판 분해&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;맥북 뒷판을 분해 할 때는 P5 드라이버가 필요합니다. 흔히 별나사라고 불리는 애플 제품에서 자주 볼 수 있는 나사를 풀기 위함입니다.&lt;/p&gt;
+&lt;p&gt;맥북 뒷판 분해시에 주의 할 점은 &lt;strong&gt;가운데 윗 부분의 나사 두 개가 다른나사와 길이가 다르다&lt;/strong&gt;는 점입니다. 이 부분만 주의하셔서 나사를 잘 챙겨두시면 재조립시에 큰 어려움이 없을 것입니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6eac50c2924cdbcd071f2da68f6d036c/d2602/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAgP/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABQc4UYlGw/8QAGBAAAwEBAAAAAAAAAAAAAAAAAQIDBAD/2gAIAQEAAQUCSYIXOpFkCPGs1VdMB2miPT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAACAgMBAAAAAAAAAAAAAAAAAREhAhIykf/aAAgBAQAGPwJUckQLZnT8JxdH/8QAGhAAAwADAQAAAAAAAAAAAAAAAAERITFBYf/aAAgBAQABPyF3OsFJDRPOKLBya8GVSLtdnFxNH//aAAwDAQACAAMAAAAQTP8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBABAAIDAAMAAAAAAAAAAAAAAQARMUFRIWGx/9oACAEBAAE/ECppDiFihhLhkwJpzywOAVQ2VlW0pd9P2BkIIbG3s//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;맥북 뒷판 분해 - 맥북과 P5 드라이버&quot;
+        title=&quot;맥북 뒷판 분해 - 맥북과 P5 드라이버&quot;
+        src=&quot;/static/6eac50c2924cdbcd071f2da68f6d036c/1c72d/1.jpg&quot;
+        srcset=&quot;/static/6eac50c2924cdbcd071f2da68f6d036c/a80bd/1.jpg 148w,
+/static/6eac50c2924cdbcd071f2da68f6d036c/1c91a/1.jpg 295w,
+/static/6eac50c2924cdbcd071f2da68f6d036c/1c72d/1.jpg 590w,
+/static/6eac50c2924cdbcd071f2da68f6d036c/a8a14/1.jpg 885w,
+/static/6eac50c2924cdbcd071f2da68f6d036c/fbd2c/1.jpg 1180w,
+/static/6eac50c2924cdbcd071f2da68f6d036c/d2602/1.jpg 4032w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/09c5932b9a1f6f917ff595f7055bf500/d2602/2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGJqaoUaD//xAAYEAADAQEAAAAAAAAAAAAAAAAAARECEv/aAAgBAQABBQLTfSqNKiRCH//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAMBAQAAAAAAAAAAAAAAAAEQIQAC/9oACAEBAAY/AoZp0GF//8QAGhABAQEBAAMAAAAAAAAAAAAAAREAITFBUf/aAAgBAQABPyGuZIOu/MDF6z3lV0xCEzPl3//aAAwDAQACAAMAAAAQVD//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCH/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFhkf/aAAgBAQABPxC2g9cqDLjTuPXdp2zDgF+7L0R1R5EpQqXP/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;맥북 뒷판 분해 - 아름다운 내부구조&quot;
+        title=&quot;맥북 뒷판 분해 - 아름다운 내부구조&quot;
+        src=&quot;/static/09c5932b9a1f6f917ff595f7055bf500/1c72d/2.jpg&quot;
+        srcset=&quot;/static/09c5932b9a1f6f917ff595f7055bf500/a80bd/2.jpg 148w,
+/static/09c5932b9a1f6f917ff595f7055bf500/1c91a/2.jpg 295w,
+/static/09c5932b9a1f6f917ff595f7055bf500/1c72d/2.jpg 590w,
+/static/09c5932b9a1f6f917ff595f7055bf500/a8a14/2.jpg 885w,
+/static/09c5932b9a1f6f917ff595f7055bf500/fbd2c/2.jpg 1180w,
+/static/09c5932b9a1f6f917ff595f7055bf500/d2602/2.jpg 4032w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;배터리 케이블 분리&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;전자 제품을 분해 한 뒤에 가장 주의해야 할 부분은 “쇼트” 입니다. 맥북은 꺼져있더라도 전원이 연결 되어 있다면, 메인보드나 부품에 전도체인 드라이버나 물 등이 닿아서 불상사가 발생 할 수도 있기 때문입니다. 전원은 완전 차단 할 수 없는 맥북의 경우에는, &lt;strong&gt;배터리 케이블을 분리 한 뒤, 작업&lt;/strong&gt;을 하시는 것을 추천 드립니다.&lt;/p&gt;
+&lt;p&gt;제 노트북에서 배터리 케이블은 오른쪽 가운데 부분에 위치 해 있습니다. 케이블을 분리 하실 때에는 메인보드에 고정 되어 있는 부분(소켓)과 분리 할 수 있는 부분(커넥터)이 어떤 것인지 잘 관찰 한 뒤에, 플라스틱이나 쇠로 된 스펏져(spudger)를 이용하시면 안전하게 분리 할 수 있습니다. 스펏져를 사용하실 때에는 메인보드를 지렛대 삼아 힘을 가하는 것 보다는 분리될 커넥터에 힘을 직접 가하는 편이 안전합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a89e3bc80c6706f290f794788a1df5ed/d2602/3.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAc1yYkjh/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAESEQIT/9oACAEBAAEFAuU9RKFRWHvJ/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhABAAIDAQAAAAAAAAAAAAAAACEyAQIxQv/aAAgBAQAGPwKqmrzl1KH/xAAcEAADAAIDAQAAAAAAAAAAAAAAAREhMXGBkdH/2gAIAQEAAT8h3ycwy+BLT6DNhqUs9JWiakiSp//aAAwDAQACAAMAAAAQpO//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQIBAT8QZX//xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhYdFBcYH/2gAIAQEAAT8QEBXJuaLb67x0S3d3nDh8+aiveSDlZB6IuNXEYlz/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;배터리 커넥터 분리&quot;
+        title=&quot;배터리 커넥터 분리&quot;
+        src=&quot;/static/a89e3bc80c6706f290f794788a1df5ed/1c72d/3.jpg&quot;
+        srcset=&quot;/static/a89e3bc80c6706f290f794788a1df5ed/a80bd/3.jpg 148w,
+/static/a89e3bc80c6706f290f794788a1df5ed/1c91a/3.jpg 295w,
+/static/a89e3bc80c6706f290f794788a1df5ed/1c72d/3.jpg 590w,
+/static/a89e3bc80c6706f290f794788a1df5ed/a8a14/3.jpg 885w,
+/static/a89e3bc80c6706f290f794788a1df5ed/fbd2c/3.jpg 1180w,
+/static/a89e3bc80c6706f290f794788a1df5ed/d2602/3.jpg 4032w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;배터리 커넥터까지 분리를 완료 했으면, 이제 맥북 청소를 하시면 됩니다. 저는 5년된 노트북 치고는 내부가 깨끗해서 딱히 청소 할 부분이 없었지만, 먼지를 날려버리기 위해 전자기기 청소용 압축 공기를 분사해 주었습니다.&lt;/p&gt;
+&lt;h2&gt;써멀컴파운드 재도포&lt;/h2&gt;
+&lt;p&gt;청소를 완료 하셨다면 이제 CPU의 열효율을 잡기위해 써멀컴파운드를 재도포 해 보겠습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;히트싱크 분해&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;히트 싱크는 왼쪽 위의 팬부분과 연결되어있는 쇠로된 부품으로, T5 드라이버를 이용해 분리 하시면 됩니다. 나사를 덥고 있는 고무 패드를 제거하신 뒤에, 나사를 분리하시면 히트싱크가 분리됩니다. 여기서 주의하실 부분은 &lt;strong&gt;CPU 근처의 나사 네 개와 팬 근처의 나사 한 개의 길이가 다르다&lt;/strong&gt;는 점입니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2553748a7e726ce3bdad7b588931d61b/d2602/4.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB5dG1RAUP/8QAGhABAAIDAQAAAAAAAAAAAAAAAQACAxITMf/aAAgBAQABBQJ2h5pAljFzMlQ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAgIDAQAAAAAAAAAAAAAAAAERMhAhoYH/2gAIAQEABj8Cv0jpZGyUmvcf/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFhcYHh/9oACAEBAAE/IR2+0uFIN8l2a+syYZkXF2lKRfE//9oADAMBAAIAAwAAABC4L//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAQACAgIDAAAAAAAAAAAAAAEAETFRIYFxsfD/2gAIAQEAAT8Qqq9VnqNsC2IaxCi/t1DExOKj5oKK0fFQw+3H/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;히트싱크&quot;
+        title=&quot;히트싱크&quot;
+        src=&quot;/static/2553748a7e726ce3bdad7b588931d61b/1c72d/4.jpg&quot;
+        srcset=&quot;/static/2553748a7e726ce3bdad7b588931d61b/a80bd/4.jpg 148w,
+/static/2553748a7e726ce3bdad7b588931d61b/1c91a/4.jpg 295w,
+/static/2553748a7e726ce3bdad7b588931d61b/1c72d/4.jpg 590w,
+/static/2553748a7e726ce3bdad7b588931d61b/a8a14/4.jpg 885w,
+/static/2553748a7e726ce3bdad7b588931d61b/fbd2c/4.jpg 1180w,
+/static/2553748a7e726ce3bdad7b588931d61b/d2602/4.jpg 4032w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;써멀컴파운드 제거&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;써멀컴파운드를 재도포 하기 전에 기존에 있던 써멀컴파운드를 제거하시면 됩니다. 써멀컴파운드를 제거하기 위해서 알콜스왑을 이용해 조심스레 닦아주었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/70a0873e143989addbee3f4b3b1a7759/d2602/5.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGUxlKJI+H/xAAaEAACAgMAAAAAAAAAAAAAAAABAgASAxEh/9oACAEBAAEFAqNCOVaIsGEkFNH/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIgMiH/2gAIAQEABj8CyzkGZdP/xAAcEAEAAQQDAAAAAAAAAAAAAAABABEhMZFB4fH/2gAIAQEAAT8hBzojJCvNszz5US87XKyVdz//2gAMAwEAAgADAAAAEPc//8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QGf/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/EGf/xAAZEAEBAQEBAQAAAAAAAAAAAAABEQAxIVH/2gAIAQEAAT8QaAdw9J6fl3OyzCl5rElnmMisz//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;써멀컴파운드 제거&quot;
+        title=&quot;써멀컴파운드 제거&quot;
+        src=&quot;/static/70a0873e143989addbee3f4b3b1a7759/1c72d/5.jpg&quot;
+        srcset=&quot;/static/70a0873e143989addbee3f4b3b1a7759/a80bd/5.jpg 148w,
+/static/70a0873e143989addbee3f4b3b1a7759/1c91a/5.jpg 295w,
+/static/70a0873e143989addbee3f4b3b1a7759/1c72d/5.jpg 590w,
+/static/70a0873e143989addbee3f4b3b1a7759/a8a14/5.jpg 885w,
+/static/70a0873e143989addbee3f4b3b1a7759/fbd2c/5.jpg 1180w,
+/static/70a0873e143989addbee3f4b3b1a7759/d2602/5.jpg 4032w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;써멀컴파운드 재도포&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;준비해둔 써멀컴파운드를 다시 도포해 줍니다. 도포하는 방법은 여러가지가 있는데, 모자란 것보다는 충분한 것이 낫다라는 이야기를 들은 적이 있어서 충분히 도포 해 주었습니다. 그렇다고 너무 과하게 도포하시면 오히려 열전도율이 떨어질 수 있으니 주의 해 줍니다. (&lt;a href=&quot;http://www.coolenjoy.net/bbs/review/2671&quot;&gt;써멀컴파운드 도포 실험&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/15ed77725a84a2e3f3248e6629ccdef1/d2602/6.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHkXRXwaD//xAAaEAACAwEBAAAAAAAAAAAAAAABAgADERIi/9oACAEBAAEFAvcGkc2QLpqpZyUyf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB0QAAEDBQEAAAAAAAAAAAAAAAABETEQISKhorH/2gAIAQEABj8CnYjek9FhsUp//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARMUFRYf/aAAgBAQABPyG/WOUvb3PllQNMbgogOnZ//9oADAMBAAIAAwAAABC3P//EABYRAQEBAAAAAAAAAAAAAAAAABEBEP/aAAgBAwEBPxCJn//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxA1f//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQdFRgaH/2gAIAQEAAT8QraXvFVz9gCAWwFvO8cxB1enc2+tGYlQHBXcQuAn/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;써멀컴파운드 재도포&quot;
+        title=&quot;써멀컴파운드 재도포&quot;
+        src=&quot;/static/15ed77725a84a2e3f3248e6629ccdef1/1c72d/6.jpg&quot;
+        srcset=&quot;/static/15ed77725a84a2e3f3248e6629ccdef1/a80bd/6.jpg 148w,
+/static/15ed77725a84a2e3f3248e6629ccdef1/1c91a/6.jpg 295w,
+/static/15ed77725a84a2e3f3248e6629ccdef1/1c72d/6.jpg 590w,
+/static/15ed77725a84a2e3f3248e6629ccdef1/a8a14/6.jpg 885w,
+/static/15ed77725a84a2e3f3248e6629ccdef1/fbd2c/6.jpg 1180w,
+/static/15ed77725a84a2e3f3248e6629ccdef1/d2602/6.jpg 4032w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;재조립 및 테스트&lt;/h2&gt;
+&lt;p&gt;조립은 분해의 역순이므로, 나사 길이가 다른 것들을 주의 하시면서 천천히 조립하시면 됩니다. 온도가 얼마나 떨어졌을지 테스트를 하기 위해서, 팬을 풀스피드로 고정 한 채, CPU를 풀로드로 5분가량 사용한 뒤, 온도를 측정 해 보았습니다.&lt;/p&gt;
+&lt;p&gt;팬을 풀스피드로 고정하기 위해서 &lt;a href=&quot;https://crystalidea.com/macs-fan-control&quot;&gt;Mac Fan Control&lt;/a&gt; 이라는 앱을 사용하였고, CPU를 풀로드 하기 위해서는 아래 명령어를 사용했습니다. (&lt;a href=&quot;https://osxdaily.com/2012/10/02/stress-test-mac-cpu/&quot;&gt;참고 사이트&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;#for 4-thread system&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;yes&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /dev/null &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;yes&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /dev/null &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;yes&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /dev/null &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;yes&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /dev/null &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이후에 알게된 앱이지만, &lt;a href=&quot;https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html&quot;&gt;Intel Power Gadget&lt;/a&gt; 을 이용하면 CPU 모니터링과 풀로드를 손쉽게 할 수 있을 것 같습니다.&lt;/p&gt;
+&lt;p&gt;테스트 결과는 풀로드시 온도가 약 86도에서 80도로 하락하는 만족스러운 결과가 나왔습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/abf4e9cfac6f42d9bc1ae16242251072/f680b/before_after.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 68.24324324324324%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABcSAAAXEgFnn9JSAAACjklEQVQ4y1WTyU4iURiF6zXUmJg4I1IUyDwa5knsXtg+gHtUQiAggm0nhvSmnwE2siIOG0kIO5cu3PsOznFKTuf85tJ2JTc3devc7z//UJrZbIbb7UYmk8H6+rrssVgMgUAAuq6j1WqBz/7+PpaWluDxeLC2toZ8Po9sNotoNAqv1wu/3w+fzwfNYrEgFArB4XDIWlxclIsMQujR0ZEAS6WSBFBau92OhYUF0bpcLiQSCaysrEAzmUyIx+NYXl7GzMwM5ufnMTc3B55zr9frAtze3pbLdMSsvmq5VADN6XRi88cmksmkQCnionM6aTQaAtzd3RXXGxsbomVApWWgSCQiZ5rhsiAcWhUAPzIKd8IpbDQ/gc3WHgynjtUwtf8Cq2xYP5ZL80Xc+Jb/Dqthxezs7EikHDabTQH++tOAK+hANpOTWlLzFcjaCtDuMRCLxmEYxn9AOqRQpfzzdwMOrx3JRApWqy5aZkMtMwkGg59Aw2Ygl8shHA7DZrONIhNIl8phsVQUUCqVkss0oLQMzImQGuoWHel0WkQETE9PjxxyKYc7OzvSSc6g0rLTKuWRQ44Au8Zus4scUgpYJwIPDg5GQNVN1pZaDjm16uegXmMEwpgCHTDq2NgYpqamMD4+jnK5LMBarSZuCCGQw0wNtZOTk+JuYmICGgf38PBQfjG62draQrVaFRBn7+zsTICnp6eoVCpSU/49HPRCoSCBisWilIb3tePjY/R6PVxeXuLq6grdbheDwQDtdhvD4RCPj49QT7/fR6fTwc3NDc7Pz3FxcQHePzk5wfX1tWi029tbPDw84O7uDk9PT3h7e5N3gri/vr6K8OPjQ87u7+/l/OXlRb7x/fn5Wc7e39/xFzFRTN+FfLNqAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;테스트 결과&quot;
+        title=&quot;테스트 결과&quot;
+        src=&quot;/static/abf4e9cfac6f42d9bc1ae16242251072/fcda8/before_after.png&quot;
+        srcset=&quot;/static/abf4e9cfac6f42d9bc1ae16242251072/12f09/before_after.png 148w,
+/static/abf4e9cfac6f42d9bc1ae16242251072/e4a3f/before_after.png 295w,
+/static/abf4e9cfac6f42d9bc1ae16242251072/fcda8/before_after.png 590w,
+/static/abf4e9cfac6f42d9bc1ae16242251072/efc66/before_after.png 885w,
+/static/abf4e9cfac6f42d9bc1ae16242251072/f680b/before_after.png 1108w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;마지막으로&lt;/h2&gt;
+&lt;p&gt;결과적으로 CPU의 최대 온도는 감소하였으나, 체감할만큼의 성능 향상은 없었습니다. 써멀컴파운드 재도포 전의 온도가 높았지만, 아마 CPU 스로틀링이 걸릴만큼의 높은 온도가 아니었던 것 같습니다.&lt;/p&gt;
+&lt;p&gt;이후 발견한 제 노트북의 문제점은 소프트웨어 중 하나가 과도하게 CPU 점유율을 높게 가지고 있다는 것이었고, 해당 소프트웨어를 제거한 뒤에 보다 쾌적한 성능을 발휘했습니다.&lt;/p&gt;
+&lt;p&gt;Intel Power Gadget을 이용하면, CPU의 온도와 성능(Frequency)의 관계를 쉽게 관찰 할 수 있어서, 내 노트북이 써멀 스로틀링이 걸리는지 미리 테스트를 해 볼 수 있고, 만약 스로틀링이 걸리고 있다면, 청소와 써멀 컴파운드 재도포를 통한 성능향상을 기대 해 볼 수 있을 것입니다.&lt;/p&gt;
+&lt;p&gt;다음편에서는 맥의 수명연장을 위해 SSD 교체를 통한 성능향상과 저장공간향상에 대한 글을 올리겠습니다. 감사합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[5분 만에 알아보는 AWS Lambda]]></title><description><![CDATA[클라우드 서비스 덕에 서버가 없어도, 서버 관리자가 없어도 소수의 인원이 웹서비스를 만들고 운용할 수 있는 시대가 도래하였습니다. 그것이 가능한 이유 중 하나인 Serverless를 AWS Lambda…]]></description><link>https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</link><guid isPermaLink="false">https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;클라우드 서비스 덕에 서버가 없어도, 서버 관리자가 없어도 소수의 인원이 웹서비스를 만들고 운용할 수 있는 시대가 도래하였습니다. 그것이 가능한 이유 중 하나인 Serverless를 AWS Lambda 예제를 이용하여 알아보겠습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;서버리스란&lt;/h2&gt;
@@ -28,7 +350,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --lts&lt;/
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;serverless create -t&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -39,7 +361,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --lts&lt;/
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 67.86060019361085%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAAClklEQVQ4y5VSy07bQBQdCLS8umilQO34Gb/tgB0nceIECCQRCZAYJFZ8Q78IZdFFP6Jl0U0/pZK77rIiyUzvndK0CyrUSEdndGdy7rnnmoyIULidpL100rtu17uT3uAiu7y5zSbjcXZ1dZ1dXFxmw+EoG41G2enpaXZ2dpb1ej2OwWCQtdvtLE3TSafTuQH45M3qZjFJom9RJ2Fh4LNa6LGkFbNqNWRhGDLXdQEOZ9u2OTuOs4RpmswwDOZ5Hr6/I/ATPc/Oq6HPgoo193ybBgCoARwaBB41TYMqisKhqipnSZKoLMu/8VAul7HZlBQKq8L+/n4exzVWrzcWwLRajWm9XqcwAoVR6fn5OYURab/fp8PhkN/FcUxrNXxbRX5oNpvs4OBgSra3twXommuaxoAX0B2ZQVdmWRbr93vs8PCQo9vtLs/Hx8ecQZhVKpUZxuP7/pRsbW0JpVIphxEYYPHIDGo8s/F4zMAVOzo64gLgmoEjnhk2xDeQ5QzEsDYl6+vrAhRzLAAv8CEGj04ty+ROUCSKIi6EjiAiDnDGAec/gpubG4Ki4Mg6jKrByCoXE8US3+DJyQkXwkh0XV8yLgEZNwy1GZ65ICEbQlmXc9fF7JSF73ssgM/HdW1wbIKjCEayeQyY61OAu9lyy4S8FAxDzisVDbpqi1arwdK0CRuPH78/G+o6/yM6fwpwN0OnQRD8cgiCX9upxhoN9cEw5bnjyPMgUOayLM1VVZorigznfwMc/sB4kiS5I4WVF6JeVr83U4fFkclMcOO6ZRb4OnTXeGbPAV3iIlut1geyQchrQZLevzWsz4qof7Kk0j04u9/dLd7v7e0CP49isfhRFMUvIPqOkLW1FQwS8Aqw88j/g52/eO0nCLBYbp3btZYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAAClklEQVQ4y5VSy07bQBQdCLS8umilQO34Gb/tgB0nceIECCQRCZAYJFZ8Q78IZdFFP6Jl0U0/pZK77rIiyUzvndK0CyrUSEdndGdy7rnnmoyIULidpL100rtu17uT3uAiu7y5zSbjcXZ1dZ1dXFxmw+EoG41G2enpaXZ2dpb1ej2OwWCQtdvtLE3TSafTuQH45M3qZjFJom9RJ2Fh4LNa6LGkFbNqNWRhGDLXdQEOZ9u2OTuOs4RpmswwDOZ5Hr6/I/ATPc/Oq6HPgoo193ybBgCoARwaBB41TYMqisKhqipnSZKoLMu/8VAul7HZlBQKq8L+/n4exzVWrzcWwLRajWm9XqcwAoVR6fn5OYURab/fp8PhkN/FcUxrNXxbRX5oNpvs4OBgSra3twXommuaxoAX0B2ZQVdmWRbr93vs8PCQo9vtLs/Hx8ecQZhVKpUZxuP7/pRsbW0JpVIphxEYYPHIDGo8s/F4zMAVOzo64gLgmoEjnhk2xDeQ5QzEsDYl6+vrAhRzLAAv8CEGj04ty+ROUCSKIi6EjiAiDnDGAec/gpubG4Ki4Mg6jKrByCoXE8US3+DJyQkXwkh0XV8yLgEZNwy1GZ65ICEbQlmXc9fF7JSF73ssgM/HdW1wbIKjCEayeQyY61OAu9lyy4S8FAxDzisVDbpqi1arwdK0CRuPH78/G+o6/yM6fwpwN0OnQRD8cgiCX9upxhoN9cEw5bnjyPMgUOayLM1VVZorigznfwMc/sB4kiS5I4WVF6JeVr83U4fFkclMcOO6ZRb4OnTXeGbPAV3iIlut1geyQchrQZLevzWsz4qof7Kk0j04u9/dLd7v7e0CP49isfhRFMUvIPqOkLW1FQwS8Aqw88j/g52/eO0nCLBYbp3btZYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -61,7 +383,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --lts&lt;/
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;serverless create -t aws-python3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -72,7 +394,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --lts&lt;/
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.847960444993824%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABy0lEQVQoz52Q3Y6TQBTHW9f0ci/cAoktM0OB4aO0FFrEjxayGJOWkth0Y3yJfYhN9ln2xjuzxo+9UXun77MJWuR4KLbZeGWc5JdzYJgf/zONBq7zZCq+Ohubz89e6+nLjMfzJZ/PM75YpDxNFzzLMr5cpjyKIr5arfh6vcbn5a7HPT1JEtPzPKmxX6f+8CrOZuC9SG+jx3EeBV4eRc/yJDnN4zjOp9NpPptFyCyfTCY5Hs5d193XW8dxIAzDN3vfkWZo74YjFwxD+WUaBCwuY0+AcwqUEkQGxghCodPp/E1JCAGUfkLX/Z1QYQ+vdU0GTSPbnkpL06KlbdPScWg5GtFyMKgqKy2LlLJMKsFdtowx6Pf7Hw5CxuRrrvdAYWRLaBcTdUFRdj/ADymmpWCada0SV2mrVLIsVxSU7oQfD8LgUfA2WaTghf6P0LeLp2NeBAEvMGWBwsKy6mr/qcMBLfBKCk0lha6Tn5wzHLn//iDkpnHjxTHo7hiCwROIPBds28I0FKpxqru7S/2e4hT1nqr2wPf9zwfhg5OTi7Yofhck6YvQFjdCu70RBGEjiuK/8FWSpG+qql7WwnvNJjbHSAfp/ifV2eNWq9X8DWGpv+K1mPLAAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 46.621621621621614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABy0lEQVQoz52Q3Y6TQBTHW9f0ci/cAoktM0OB4aO0FFrEjxayGJOWkth0Y3yJfYhN9ln2xjuzxo+9UXun77MJWuR4KLbZeGWc5JdzYJgf/zONBq7zZCq+Ohubz89e6+nLjMfzJZ/PM75YpDxNFzzLMr5cpjyKIr5arfh6vcbn5a7HPT1JEtPzPKmxX6f+8CrOZuC9SG+jx3EeBV4eRc/yJDnN4zjOp9NpPptFyCyfTCY5Hs5d193XW8dxIAzDN3vfkWZo74YjFwxD+WUaBCwuY0+AcwqUEkQGxghCodPp/E1JCAGUfkLX/Z1QYQ+vdU0GTSPbnkpL06KlbdPScWg5GtFyMKgqKy2LlLJMKsFdtowx6Pf7Hw5CxuRrrvdAYWRLaBcTdUFRdj/ADymmpWCada0SV2mrVLIsVxSU7oQfD8LgUfA2WaTghf6P0LeLp2NeBAEvMGWBwsKy6mr/qcMBLfBKCk0lha6Tn5wzHLn//iDkpnHjxTHo7hiCwROIPBds28I0FKpxqru7S/2e4hT1nqr2wPf9zwfhg5OTi7Yofhck6YvQFjdCu70RBGEjiuK/8FWSpG+qql7WwnvNJjbHSAfp/ifV2eNWq9X8DWGpv+K1mPLAAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -134,7 +456,7 @@ handler.py는 우리가 클라우드 서비스에서 실행시킬 함수가 들�
 &lt;p&gt;배포 완료 후, endpoint에 API 주소가 나타납니다. 그 주소 제일 뒤에 ?age=100을 추가하여 API를 테스트해 보겠습니다. 아래와 같은 출력이 나온다면 성공입니다. 웹브라우저나 curl을 이용하여 테스트해 보시면 됩니다.
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 522px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 522px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -145,7 +467,7 @@ handler.py는 우리가 클라우드 서비스에서 실행시킬 함수가 들�
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 53.83141762452107%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACBklEQVQoz62Tz4/SUBDHWUCjAS4GYW2BRci6sP2xIIUWKW2plJYfhcjGsEc3kODBeNJsuMjZLD0Y/zUTTv4fmuIb51UlejBRY5NvZua9eZ/MzHsNwdmT0P/4JEk6+OHfeKYZL54/ld5rl6ONczH3bMvwLLvnaR3Tsx3Hc1D9ft/r9Xpet9v1bNv2LMui8abdbr/jeb5CQZ1OB6G3bqceCdzH0UQHaTaG1vkFGG0XHN0BtyXD47YGg6EDw+EQJpMxjMdjmE6nMJvNYDAYgOu60Gw2X1LgYrEIU1uoK8oHoSpBucx/5njOF4SHflWs+OJp2ec5zq9Wq36lgrEoBpbG2KJfr9c/ybIMgiC8oqDlchkAi4osb0ejIXQt64vSbBJFkYmu68Q0TdJoNAIfDxNN0wi2j/sKQQip1Wo79KFUKl1R0Hw+p8CD4tH97FZUVRANcyfiofJJi8hCg3TPOCKWToluaOT4+AHBWRGskhQKBZLNZkkmk/FxDVBX+5aj0WiRZdlthmWBYe7tGIahiYRlGcKw7Hf/m6V7VBSWy+Xo+i/AoMJwOFzA5O1RPg+Y9FeicJwnqKr6mgLX63Uww7uJROIS9TYej1//pM1v/L1isdh1Mpl8k0qlZOREV6tV8A5vou6gsqj8P+gQFUdoeP/KaZBOpyNo/1g0H6uL4AVF8JaDvwQAQl8B8jbSvZteLjAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 54.05405405405405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACBklEQVQoz62Tz4/SUBDHWUCjAS4GYW2BRci6sP2xIIUWKW2plJYfhcjGsEc3kODBeNJsuMjZLD0Y/zUTTv4fmuIb51UlejBRY5NvZua9eZ/MzHsNwdmT0P/4JEk6+OHfeKYZL54/ld5rl6ONczH3bMvwLLvnaR3Tsx3Hc1D9ft/r9Xpet9v1bNv2LMui8abdbr/jeb5CQZ1OB6G3bqceCdzH0UQHaTaG1vkFGG0XHN0BtyXD47YGg6EDw+EQJpMxjMdjmE6nMJvNYDAYgOu60Gw2X1LgYrEIU1uoK8oHoSpBucx/5njOF4SHflWs+OJp2ec5zq9Wq36lgrEoBpbG2KJfr9c/ybIMgiC8oqDlchkAi4osb0ejIXQt64vSbBJFkYmu68Q0TdJoNAIfDxNN0wi2j/sKQQip1Wo79KFUKl1R0Hw+p8CD4tH97FZUVRANcyfiofJJi8hCg3TPOCKWToluaOT4+AHBWRGskhQKBZLNZkkmk/FxDVBX+5aj0WiRZdlthmWBYe7tGIahiYRlGcKw7Hf/m6V7VBSWy+Xo+i/AoMJwOFzA5O1RPg+Y9FeicJwnqKr6mgLX63Uww7uJROIS9TYej1//pM1v/L1isdh1Mpl8k0qlZOREV6tV8A5vou6gsqj8P+gQFUdoeP/KaZBOpyNo/1g0H6uL4AVF8JaDvwQAQl8B8jbSvZteLjAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -253,7 +575,7 @@ python 2.7.16
 python 3.7.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -264,7 +586,7 @@ python 3.7.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 69.94134897360703%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACKUlEQVQ4y52Sy28SURjFQbu9SwjvR3g/y2sK8prCAA4wQhtTmxRiYxt3xoTEqBsDUeNf4H/XzNZo3OmuMHM937VASLqhk/zycZl7z5xzZiwWXHOpc/D9bZ0Nr4usni+y42qJ9ZUGu3iusVeTF+x6es4+zt6wT+9n7APm68sLNj07EUzA1eSMvTw/PbCsL1WqXE7HzR/dZ/UbRZb19nFDV8CJpuraQNWHaleX61W9LTfEvSdHJb1WOVpzA35KhdzVRjCfzy/6/T5Xn6p8NBpxVVV5vVbj7Xabt1otXi6XeSaT4fF4XJBKJbnP59sQDAa52+3+uhFMJpNzRVG4LMu31WrVCIfDBjaJ+Z+IEYvFjGg0KtY0/X6/4fV6iVt/IMCdTueXjWChUFiMx2Pe6/VWnU7HPDw85JFIhKfTaeEsl8vxRCIh1hCGwxQPhUIcYiYcLgMQdLlcW0FsWFA0uFw1m02TIqIGns1mORwJARzgDodjZyKm6fF4lnC7K0gOqbvBYLDSNM2kPrvdLqeJGsg5r6FTepAkSZuJcyZcL+nBEN0KIt4C3dGmVaVSMYvFonBYKpVERHoR6FlEpuj0m/6DexNxlxQfrreCNpttAftke4VyTYqzBpEo2r3gnokeReQdQSzmVCwVDIx9EG/5HsHPd4IPgr5DaHzbCNrt9hki/AG/wO89oTN/ofFurWcFPqvV2gMaGO6JdnfWL7Rgdy36CDx+IHTWii4t/wDZNi8QRgSIMAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 70.27027027027026%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACKUlEQVQ4y52Sy28SURjFQbu9SwjvR3g/y2sK8prCAA4wQhtTmxRiYxt3xoTEqBsDUeNf4H/XzNZo3OmuMHM937VASLqhk/zycZl7z5xzZiwWXHOpc/D9bZ0Nr4usni+y42qJ9ZUGu3iusVeTF+x6es4+zt6wT+9n7APm68sLNj07EUzA1eSMvTw/PbCsL1WqXE7HzR/dZ/UbRZb19nFDV8CJpuraQNWHaleX61W9LTfEvSdHJb1WOVpzA35KhdzVRjCfzy/6/T5Xn6p8NBpxVVV5vVbj7Xabt1otXi6XeSaT4fF4XJBKJbnP59sQDAa52+3+uhFMJpNzRVG4LMu31WrVCIfDBjaJ+Z+IEYvFjGg0KtY0/X6/4fV6iVt/IMCdTueXjWChUFiMx2Pe6/VWnU7HPDw85JFIhKfTaeEsl8vxRCIh1hCGwxQPhUIcYiYcLgMQdLlcW0FsWFA0uFw1m02TIqIGns1mORwJARzgDodjZyKm6fF4lnC7K0gOqbvBYLDSNM2kPrvdLqeJGsg5r6FTepAkSZuJcyZcL+nBEN0KIt4C3dGmVaVSMYvFonBYKpVERHoR6FlEpuj0m/6DexNxlxQfrreCNpttAftke4VyTYqzBpEo2r3gnokeReQdQSzmVCwVDIx9EG/5HsHPd4IPgr5DaHzbCNrt9hki/AG/wO89oTN/ofFurWcFPqvV2gMaGO6JdnfWL7Rgdy36CDx+IHTWii4t/wDZNi8QRgSIMAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -296,7 +618,7 @@ python 3.7.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 3. shell command를 입력 한 뒤에, Install &amp;#39;code&amp;#39; command in PATH를 선택하여 실행한다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -307,7 +629,7 @@ python 3.7.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 16.181229773462785%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsSAAALEgHS3X78AAAAkklEQVQI12PIzMy2tbNzc3NzdnExMjU3MjEHkoYg0gLIMDGzMLOwQkPmltZGJqah4VEMEZkNMhZxag6pag6JBg7B+g7BenZBBg4h+vYhOraBcgYeEtpOaEhSx1lIzc4xIJGhvLbd0TfeKzTNOzQ5IjI6IjImPCIKyIiMigmLiAwKCXd193Jx80RGQBF7R5e0jCwA8FYvSLxJtLUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 16.216216216216214%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsSAAALEgHS3X78AAAAkklEQVQI12PIzMy2tbNzc3NzdnExMjU3MjEHkoYg0gLIMDGzMLOwQkPmltZGJqah4VEMEZkNMhZxag6pag6JBg7B+g7BenZBBg4h+vYhOraBcgYeEtpOaEhSx1lIzc4xIJGhvLbd0TfeKzTNOzQ5IjI6IjImPCIKyIiMigmLiAwKCXd193Jx80RGQBF7R5e0jCwA8FYvSLxJtLUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -336,7 +658,7 @@ code &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;&lt;/c
 &lt;p&gt;저는 다양한 python 버전을 사용하지는 않지만, python 내장 모듈인 venv를 사용 할 때, pip list를 실행 할 때마다 뜨는 업데이트 경고문구가 눈에 거슬려서 virtualenv를 선택했습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -347,7 +669,7 @@ code &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;&lt;/c
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 85.57046979865771%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAAC8UlEQVQ4y51T2W7TUBC1k7aULLhphaJstktix/ESO1sdr0mzUBF+FIkPqfoCTwhhEEbihW8ouRnm3qZpeQiVsHR05s6Mj2d8ZziO4/g4jtUoDPvz+dwOo8jxPM8Jw9CZTCYMGHeirT8IAuajTM++79uY23Ndt53NZnnu6OiwoBvGJ9OyoN/r33Yta93pdNamaa4ttClTGIbB/LquMz9lekbcYhza7XZSKBRecNVq6eSV1vra8kMwbHvjBQFcXFwAfhlGoxFIkgS1Wg3q9fo+bChj3o9yuXzKZbMZIQjDL/F8Bk29s/YXy00cRRsbxRVF2ciytBFF8V9YS5IIsix/Pzs7K+Ev5ATfC5LhYAgdTSeX0xmW34FyuQLVKq2g8RdqtQeu1RlIvS5SX1osFkpcJnMouK6ZhGEXXFcnk9iGXq8FdlcC25bB0CWwLJnBNGXodtE2H86OLRNqn5+L6fFxgVaYERxHTxynDS2jSdp9HZRWHTRNxEpFUBQRWq0GYwpVFaHZbLA4tTFGNE2ivpTncyUO+xZ8P0ziaAJBGBE/iCBAoG+HILjD4/Mjm9B8z/PTcvlliSsUngkdS08sTBoMhyQMAxgM+njTI6xCAxyLHd/bOCKMNY0xMU2DxlIcm7tLmc1myZvVCnBgyQoZz7BYLGC5XO7GBwd3BzpW1EcxHo/JYDDA36GkuRy2zPO8gELJAkVwU8h0OoWrqyvAzWAv39u4FQy4FeyMQgy4MYQK46ym+Xy+xB0ccILrjxPb80FRVdLr9WA4HEK/3wfHcVhrjUaDDfceEBrHOUxL+KAgL4x9L/GwMqmtkvF8CbjXTAzbABxcJkh5Dwhl3JT0YbB9/7OLZRu6fju/vGQ7WqlU1rhSaxRb022gvAe/tx/9xlrG5wQv4GccR6B3LXi9estuc9sG2+WnQPNQ9FexWDylgnnDMN+pqvKxKkvXTat7g8Eb/Dc3WCHjJ3CN+IC57/GWi1zueY5H0RytlLb/nzjZavB/ABKCoMmSOr3cAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 85.8108108108108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAAC8UlEQVQ4y51T2W7TUBC1k7aULLhphaJstktix/ESO1sdr0mzUBF+FIkPqfoCTwhhEEbihW8ouRnm3qZpeQiVsHR05s6Mj2d8ZziO4/g4jtUoDPvz+dwOo8jxPM8Jw9CZTCYMGHeirT8IAuajTM++79uY23Ndt53NZnnu6OiwoBvGJ9OyoN/r33Yta93pdNamaa4ttClTGIbB/LquMz9lekbcYhza7XZSKBRecNVq6eSV1vra8kMwbHvjBQFcXFwAfhlGoxFIkgS1Wg3q9fo+bChj3o9yuXzKZbMZIQjDL/F8Bk29s/YXy00cRRsbxRVF2ciytBFF8V9YS5IIsix/Pzs7K+Ev5ATfC5LhYAgdTSeX0xmW34FyuQLVKq2g8RdqtQeu1RlIvS5SX1osFkpcJnMouK6ZhGEXXFcnk9iGXq8FdlcC25bB0CWwLJnBNGXodtE2H86OLRNqn5+L6fFxgVaYERxHTxynDS2jSdp9HZRWHTRNxEpFUBQRWq0GYwpVFaHZbLA4tTFGNE2ivpTncyUO+xZ8P0ziaAJBGBE/iCBAoG+HILjD4/Mjm9B8z/PTcvlliSsUngkdS08sTBoMhyQMAxgM+njTI6xCAxyLHd/bOCKMNY0xMU2DxlIcm7tLmc1myZvVCnBgyQoZz7BYLGC5XO7GBwd3BzpW1EcxHo/JYDDA36GkuRy2zPO8gELJAkVwU8h0OoWrqyvAzWAv39u4FQy4FeyMQgy4MYQK46ym+Xy+xB0ccILrjxPb80FRVdLr9WA4HEK/3wfHcVhrjUaDDfceEBrHOUxL+KAgL4x9L/GwMqmtkvF8CbjXTAzbABxcJkh5Dwhl3JT0YbB9/7OLZRu6fju/vGQ7WqlU1rhSaxRb022gvAe/tx/9xlrG5wQv4GccR6B3LXi9estuc9sG2+WnQPNQ9FexWDylgnnDMN+pqvKxKkvXTat7g8Eb/Dc3WCHjJ3CN+IC57/GWi1zueY5H0RytlLb/nzjZavB/ABKCoMmSOr3cAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;

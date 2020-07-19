@@ -1,6 +1,6 @@
 ---
 title: 5분 만에 알아보는 AWS Lambda
-date: "2020-04-26T23:50:00+09"
+date: "2020-04-26"
 description: 예제와 함께하는 AWS Lambda with Python
 draft: false
 ---

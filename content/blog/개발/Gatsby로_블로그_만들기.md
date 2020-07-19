@@ -1,6 +1,6 @@
 ---
 title: Gatsby로 블로그 만들기
-date: "2020-04-10T17:48:00+09"
+date: "2020-04-10"
 description: Gatsby로 쉽게 만드는 Github Page
 draft: true
 ---

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://comlhj1114.github.io/잡담/2020_상반기회고/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://comlhj1114.github.io/기타/맥북_청소/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://comlhj1114.github.io/개발/5분만에_알아보는_AWS_Lambda/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://comlhj1114.github.io/개발/5분만에_알아보는_웹스크래핑/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
